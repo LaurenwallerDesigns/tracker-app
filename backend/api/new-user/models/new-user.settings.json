@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "new_users",
+  "info": {
+    "name": "newUser"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "createPassword": {
+      "type": "password"
+    },
+    "checkPassword": {
+      "type": "password"
+    },
+    "emailList": {
+      "type": "boolean",
+      "default": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "lastName"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contents",
+  "info": {
+    "name": "Content"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "isPublic": {
+      "type": "boolean",
+      "default": false,
+      "required": true,
+      "private": false
+    },
+    "date": {
+      "type": "date"
+    },
+    "journal_entries": {
+      "collection": "journal-entry",
+      "via": "content"
+    }
+  }
+}

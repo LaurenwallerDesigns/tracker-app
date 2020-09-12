@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "journal_entries",
+  "info": {
+    "name": "journalEntry"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "date": {
+      "type": "datetime",
+      "required": true,
+      "unique": true,
+      "default": "2020-09-12T16:00:00.000Z"
+    },
+    "entry": {
+      "type": "richtext",
+      "required": true
+    },
+    "author": {
+      "type": "json",
+      "required": true,
+      "unique": true
+    },
+    "isPublic": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "content": {
+      "via": "journal_entries",
+      "model": "content"
+    },
+    "isDeleted": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}
