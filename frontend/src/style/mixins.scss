@@ -1,0 +1,9 @@
+@mixin flexbox($screenSize) {
+    @if $screenSize==mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-content: center;
+        align-items: center;
+    }
+}
