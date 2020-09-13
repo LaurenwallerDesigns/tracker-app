@@ -115,5 +115,72 @@ section {
     }
 }
 
+//forms
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: $dkGreen;
+    min-height: 100vh;
+    height: auto;
+    overflow: scroll;
+    width: 90vw;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    color: $orange;
+    border: 2px solid $orange;
+    @include boxshadow();
+    .back-button {
+        outline: none;
+        border: none;
+        text-align: left;
+        align-self: flex-start;
+        margin-bottom: 2vh !important;
+        background-color: transparent;
+        font-size: 1.5em;
+        color: $babyBlue;
+        &:hover {
+            cursor: pointer;
+            color: $brightGreen;
+            @include textshadow();
+        }
+    }
+    h2 {
+        font-size: 5em;
+        @include textshadow();
+        margin-bottom: 7vh !important;
+    }
+    label {
+        font-size: 2em;
+        margin: 2px 0px !important;
+        @include textshadow();
+    }
+    input {
+        width: 50vw;
+        height: 3vh;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    .submit-btn {
+        outline: none;
+        border: 1px solid $orange;
+        background-color:transparent;
+        margin: 5vh auto !important;
+        font-size: 2em;
+        color: $orange;
+        height: auto;
+        @include textshadow();
+        @include boxshadow();
+
+        &:hover {
+            background: $orange;
+            color: $dkGreen;
+        }
+    }
+}
+
+  
 
 
